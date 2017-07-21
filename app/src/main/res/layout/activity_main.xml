@@ -1,58 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/lib/com.example.rodrigoboto.friendlyhomeleague"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.rodrigoboto.friendlyhomeleague.MainActivity">
 
+    <TextView
+        android:id="@+id/contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toLeftOf="@+id/floatingActionButton4"
+        android:layout_toStartOf="@+id/floatingActionButton4" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="23dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="20dp"
-        android:text="Numero de Jugadores : "
+        android:layout_marginTop="22dp"
+        android:text="@string/cant_jugadores"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_marginLeft="39dp"
-        android:layout_marginStart="39dp"
-        android:textAlignment="center"/>
-
-    <Button
-        android:id="@+id/button"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp"
-        android:text="Crear"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="18dp" />
+        android:layout_alignLeft="@+id/switch2"
+        android:layout_alignStart="@+id/switch2" />
 
     <Switch
         android:id="@+id/switch2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ida y Vuelta "
+        android:text="@string/ida_Y_Vuelta"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="27dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
+
+    <!--Cruz-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="@drawable/ic_cancel_black_24dp"
+        app:fabSize="auto"
+        app:srcCompact="@drawable/ic_cancel_black_24dp"
+        android:layout_marginBottom="14dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/switch2"
+        android:layout_alignStart="@+id/switch2" />
+    <!--Mas-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="@drawable/ic_remove_circle_black_24dp"
+        app:fabSize="auto"
+        app:srcCompact="@drawable/ic_remove_circle_black_24dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp" />
+    <!--Menos-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="@drawable/ic_add_circle_black_24dp"
+        app:fabSize="auto"
+        app:srcCompact="@drawable/ic_add_circle_black_24dp"
+        android:layout_alignTop="@+id/floatingActionButton3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp" />
+    <!--Check-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="@drawable/ic_check_circle_black_24dp"
+        app:fabSize="auto"
+        app:srcCompact="@drawable/ic_check_circle_black_24dp"
+
+        android:layout_alignTop="@+id/floatingActionButton1"
+        android:layout_alignRight="@+id/switch2"
+        android:layout_alignEnd="@+id/switch2" />
+
+
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -60,7 +104,7 @@
         android:layout_below="@+id/switch2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="0.5dp">
+        android:layout_marginBottom="65dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,7 +124,7 @@
                 android:textAlignment="center"
                 android:hint="@string/nomJuga"
                 android:inputType="textPersonName"
-                 />
+                />
             <EditText
                 android:id="@+id/editText2"
                 android:layout_width="match_parent"
@@ -165,6 +209,7 @@
                 android:hint="@string/nomJuga"
                 android:inputType="textPersonName"
                 />
+
             <EditText
                 android:id="@+id/editText8"
                 android:layout_width="match_parent"
@@ -179,20 +224,22 @@
                 android:hint="@string/nomJuga"
                 android:inputType="textPersonName"
                 />
+
+
             <EditText
                 android:id="@+id/editText9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/editText8"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
+                android:layout_marginTop="5dp"
                 android:ems="10"
-                android:textAlignment="center"
                 android:hint="@string/nomJuga"
                 android:inputType="textPersonName"
-                />
+                android:textAlignment="center" />
+
             <EditText
                 android:id="@+id/editText10"
                 android:layout_width="match_parent"

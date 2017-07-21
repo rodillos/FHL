@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/lib/com.example.rodrigoboto.friendlyhomeleague"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rodrigoboto.friendlyhomeleague.TablaPosiciones">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:clickable="true"
+        android:background="@drawable/ic_brightness_1_black_24dp"
+        app:fabSize="auto"
+        app:srcCompact="@drawable/ic_arrow_back_black_24dp"
+        tools:layout_editor_absoluteY="430dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_alignTop="@+id/floatingActionButton3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:clickable="true"
+        android:background="@drawable/ic_brightness_1_black_24dp"
+        app:fabSize="auto"
+        app:srcCompact="@drawable/ic_done_all_black_24dp"
+        tools:layout_editor_absoluteY="430dp"
+        tools:layout_editor_absoluteX="279dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/tableLayout"
+        android:layout_alignEnd="@+id/tableLayout"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="24dp" />
+
+    <TableLayout
+        android:layout_width="359dp"
+        android:layout_height="355dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:id="@+id/tableLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/cabeceraNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:fontFamily="Roboto medium"
+                android:text="@string/cabeceraNombre"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cabeceraPosicion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="Roboto medium"
+                android:text="@string/cabeceraPosicion"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cabeceraJugados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="Roboto medium"
+                android:text="@string/cabeceraJugados"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cabeceraGanados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="Roboto medium"
+                android:text="@string/cabeceraGanados"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cabeceraEmptados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="Roboto medium"
+                android:text="@string/cabeceraEmpatados"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cabeceraPerdidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="Roboto medium"
+                android:text="@string/cabeceraPerdidos"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/jugador1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/jugador1"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="0"/>
+
+            <TextView
+                android:id="@+id/posicion1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/posicion1"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="1"/>
+
+            <TextView
+                android:id="@+id/PJ1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PJ1"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="2"/>
+
+            <TextView
+                android:id="@+id/PG1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PG1"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="3"/>
+
+            <TextView
+                android:id="@+id/Pe1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PE1"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="4"/>
+
+            <TextView
+                android:id="@+id/PP1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PP1"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="5"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fondoRow"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/jugador2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/jugador2"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="0"/>
+
+            <TextView
+                android:id="@+id/posicion2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/posicion2"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="1"/>
+
+            <TextView
+                android:id="@+id/PJ2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PJ2"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="2"/>
+
+            <TextView
+                android:id="@+id/PG2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PG2"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="3"/>
+
+            <TextView
+                android:id="@+id/Pe2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PE2"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="4"/>
+
+            <TextView
+                android:id="@+id/PP2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PP2"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="5"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/jugador3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/jugador3"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="0"/>
+
+            <TextView
+                android:id="@+id/posicion3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/posicion3"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="1"/>
+
+            <TextView
+                android:id="@+id/PJ3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PJ3"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="2"/>
+
+            <TextView
+                android:id="@+id/PG3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PG3"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="3"/>
+
+            <TextView
+                android:id="@+id/Pe3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PE3"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="4"/>
+
+            <TextView
+                android:id="@+id/PP3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PP3"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="5"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fondoRow"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/jugador4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/jugador4"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="0"/>
+
+            <TextView
+                android:id="@+id/posicion4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/posicion4"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="1"/>
+
+            <TextView
+                android:id="@+id/PJ4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PJ4"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="2"/>
+
+            <TextView
+                android:id="@+id/PG4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PG4"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="3"/>
+
+            <TextView
+                android:id="@+id/Pe4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PE4"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="4"/>
+
+            <TextView
+                android:id="@+id/PP4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PP4"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="5"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="7dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/jugador5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/jugador5"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="0"/>
+
+            <TextView
+                android:id="@+id/posicion5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/posicion5"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="1"/>
+
+            <TextView
+                android:id="@+id/PJ5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PJ5"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="2"/>
+
+            <TextView
+                android:id="@+id/PG5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PG5"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="3"/>
+
+            <TextView
+                android:id="@+id/Pe5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PE5"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="4"/>
+
+            <TextView
+                android:id="@+id/PP5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PP5"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="5"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fondoRow"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/jugador6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/jugador6"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="0"/>
+
+            <TextView
+                android:id="@+id/posicion6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/posicion6"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="1"/>
+
+            <TextView
+                android:id="@+id/PJ6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PJ6"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="2"/>
+
+            <TextView
+                android:id="@+id/PG6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PG6"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="3"/>
+
+            <TextView
+                android:id="@+id/Pe6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PE6"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="4"/>
+
+            <TextView
+                android:id="@+id/PP6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PP6"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="5"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="7dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/jugador7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/jugador7"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="0"/>
+
+            <TextView
+                android:id="@+id/posicion7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/posicion7"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="1"/>
+
+            <TextView
+                android:id="@+id/PJ7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PJ7"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="2"/>
+
+            <TextView
+                android:id="@+id/PG7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PG7"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="3"/>
+
+            <TextView
+                android:id="@+id/Pe7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PE7"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="4"/>
+
+            <TextView
+                android:id="@+id/PP7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PP7"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="5"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fondoRow"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/jugador8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/jugador8"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="0"/>
+
+            <TextView
+                android:id="@+id/posicion8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/posicion8"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="1"/>
+
+            <TextView
+                android:id="@+id/PJ8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PJ8"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="2"/>
+
+            <TextView
+                android:id="@+id/PG8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PG8"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="3"/>
+
+            <TextView
+                android:id="@+id/Pe8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PE8"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="4"/>
+
+            <TextView
+                android:id="@+id/PP8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PP8"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="5"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/jugador9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/jugador9"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="0"/>
+
+            <TextView
+                android:id="@+id/posicion9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/posicion9"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="1"/>
+
+            <TextView
+                android:id="@+id/PJ9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PJ9"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="2"/>
+
+            <TextView
+                android:id="@+id/PG9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PG9"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="3"/>
+
+            <TextView
+                android:id="@+id/Pe9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PE9"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="4"/>
+
+            <TextView
+                android:id="@+id/PP9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PP9"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="5"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fondoRow"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/jugador0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/jugador0"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="0"/>
+
+            <TextView
+                android:id="@+id/posicion0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/posicion0"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="1"/>
+
+            <TextView
+                android:id="@+id/PJ0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PJ0"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="2"/>
+
+            <TextView
+                android:id="@+id/PG0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PG0"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="3"/>
+
+            <TextView
+                android:id="@+id/Pe0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PE0"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="4"/>
+
+            <TextView
+                android:id="@+id/PP0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PP0"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="5"/>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

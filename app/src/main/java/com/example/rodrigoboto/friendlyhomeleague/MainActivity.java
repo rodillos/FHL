@@ -4,13 +4,10 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.sql.Array;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -20,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ArrayList<EditText> listaCampos = new ArrayList<>(16);
     Switch idaVuelta;
     Integer valorContador = 4;
-    String textAux;
+    String valorMax = "10", valorMin = "4";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,10 +106,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void controlarValores() {
         if (valorContador <= 4) {
+            contador.setText(valorMin);
             valorContador = 4;
             Toast.makeText(getApplicationContext(), R.string.min, Toast.LENGTH_SHORT).show();
-        }else if (valorContador >= 20){
-            valorContador = 20;
+        }else if (valorContador >= 10){
+            contador.setText(valorMax);
+            valorContador = 10;
            Toast.makeText(getApplicationContext(), R.string.max, Toast.LENGTH_SHORT).show();
         }
     }
