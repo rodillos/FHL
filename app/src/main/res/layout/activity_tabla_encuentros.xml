@@ -959,7 +959,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_weight="1"
                 android:padding="5dp"
-                android:text="@string/jugador10"
+                android:text="@string/jugador0"
                 android:textAlignment="center"
                 android:textSize="12dp" />
         </TableRow>
@@ -1020,7 +1020,7 @@
             android:layout_marginTop="4dp"
             android:layout_weight="1"
             android:padding="5dp"
-            android:text="@string/jugador10"
+            android:text="@string/jugador0"
             android:textAlignment="center"
             android:textSize="12dp" />
     </TableRow>
@@ -1345,7 +1345,7 @@ android:id="@+id/e18">
             android:layout_marginTop="4dp"
             android:layout_weight="1"
             android:padding="5dp"
-            android:text="@string/jugador10"
+            android:text="@string/jugador0"
             android:textAlignment="center"
             android:textSize="12dp" />
 
@@ -2677,7 +2677,7 @@ android:id="@+id/e18">
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="3dp"
-            android:id="@+id/44">
+            android:id="@+id/e44">
 
             <TextView
                 android:id="@+id/jugador4"
