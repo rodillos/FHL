@@ -6,10 +6,14 @@
     android:layout_height="match_parent"
     tools:context="com.example.rodrigoboto.friendlyhomeleague.TablaEncuentros">
 
-    <ScrollView
-        android:layout_width="342dp"
-        android:layout_height="441dp"
-        android:layout_marginStart="7dp"
+
+   <ScrollView
+       android:layout_width="wrap_content"
+       android:layout_height="441dp"
+       android:id="@+id/scroll">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="7dp"
         android:id="@+id/scrollView2">
@@ -18,7 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout_editor_absoluteX="180dp"
-            tools:layout_editor_absoluteY="56dp">
+            tools:layout_editor_absoluteY="56dp"
+            >
 
             <TableRow
                 android:layout_width="match_parent"
@@ -34,10 +39,8 @@
                     android:textSize="18dp"
                     tools:layout_editor_absoluteX="4dp"
                     tools:layout_editor_absoluteY="2dp"
-                    android:layout_weight="1"/>
-
-
-            </TableRow>
+                    />
+                </TableRow>
 
             <View
                 android:layout_width="344dp"
@@ -2795,6 +2798,7 @@ android:id="@+id/e18">
                 android:textAlignment="center"
                 android:textSize="12dp" />
         </TableRow>
+    </TableLayout>
     </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
@@ -2810,9 +2814,9 @@ android:id="@+id/e18">
         tools:layout_editor_absoluteX="300dp"
         tools:layout_editor_absoluteY="455dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/scrollView2"
-        android:layout_alignEnd="@+id/scrollView2"
-        android:layout_marginBottom="12dp" />
+        android:layout_marginBottom="12dp"
+        android:layout_alignRight="@+id/scroll"
+        />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton2"
@@ -2827,7 +2831,7 @@ android:id="@+id/e18">
         android:layout_marginLeft="18dp"
         android:layout_marginStart="18dp"
         android:layout_alignTop="@+id/floatingActionButton1"
-        android:layout_alignLeft="@+id/scrollView2"
-        android:layout_alignStart="@+id/scrollView2" />
+        android:layout_alignLeft="@+id/scroll"
+        android:layout_alignStart="@+id/scroll" />
 
 </RelativeLayout>
