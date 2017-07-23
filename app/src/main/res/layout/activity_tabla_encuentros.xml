@@ -970,7 +970,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="3dp"
-            android:id="@+id/e15">
+            android:id="@+id/e16">
 
 				<TextView
                     android:id="@+id/jugador1"
@@ -2802,7 +2802,7 @@ android:id="@+id/e18">
     </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton1"
+        android:id="@+id/verTabla"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="18dp"
@@ -2819,7 +2819,7 @@ android:id="@+id/e18">
         />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
+        android:id="@+id/volverAMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -2830,7 +2830,7 @@ android:id="@+id/e18">
         tools:layout_editor_absoluteX="20dp"
         android:layout_marginLeft="18dp"
         android:layout_marginStart="18dp"
-        android:layout_alignTop="@+id/floatingActionButton1"
+        android:layout_alignTop="@+id/verTabla"
         android:layout_alignLeft="@+id/scroll"
         android:layout_alignStart="@+id/scroll" />
 

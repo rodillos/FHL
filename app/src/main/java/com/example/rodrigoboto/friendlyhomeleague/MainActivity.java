@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.floatingActionButton4:
                 Toast.makeText(getApplicationContext(), R.string.crear, Toast.LENGTH_SHORT).show();
+                generarTorneo(v);
                 break;
             case R.id.floatingActionButton1:
                 Toast.makeText(getApplicationContext(), R.string.reset, Toast.LENGTH_SHORT).show();
