@@ -11,6 +11,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -50,10 +51,10 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         volverAMain = (FloatingActionButton) findViewById(R.id.volverAMain);
         volverAMain.setOnClickListener(this);
 
-        //esconderEncuentros(cantidadJugadores);
+        esconderEncuentros(cantidadJugadores);
     }
 
-   /* private void esconderEncuentros(Integer cantidadJugadores){
+   private void esconderEncuentros(Integer cantidadJugadores){
         switch (cantidadJugadores){
             case 4:
                 esconderMaximoEncuentros();
@@ -74,12 +75,85 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
             case 9:
                 esconderPara9Jugadores();
                 break;
+            default: break;
         }
     }
-    */
+
+    private void esconderMaximoEncuentros(){
+        esconderPara5Jugadores();
+
+        ArrayList<Integer>listaDeEncuentrosPara4 = new ArrayList<>(4);
+        listaDeEncuentrosPara4.addAll(Arrays.asList(27,18,12,34));
+
+        esconderRowDeLista(listaDeEncuentrosPara4);
+    }
+
+
+
+    private void esconderPara5Jugadores(){
+        esconderPara6Jugadores();
+
+        ArrayList<Integer>listaDeEncuentrosPara5 = new ArrayList<>(5);
+        listaDeEncuentrosPara5.addAll(Arrays.asList(22,28,42,6,39));
+
+        esconderRowDeLista(listaDeEncuentrosPara5);
+    }
+
+    private void esconderPara6Jugadores(){
+        esconderPara7Jugadores();
+
+        ArrayList<Integer>listaDeEncuentrosPara6 = new ArrayList<>(6);
+        listaDeEncuentrosPara6.addAll(Arrays.asList(32,23,11,29,43,8));
+
+        esconderRowDeLista(listaDeEncuentrosPara6);
+    }
+
+    private void esconderPara7Jugadores(){
+        esconderPara8Jugadores();
+
+        ArrayList<Integer>listaDeEncuentrosPara7 = new ArrayList<>(7);
+        listaDeEncuentrosPara7.addAll(Arrays.asList(37,33,19,7,9,25,10));
+
+        esconderRowDeLista(listaDeEncuentrosPara7);
+    }
+
+    private void esconderPara8Jugadores() {
+        esconderPara9Jugadores();
+        ArrayList<Integer> listaDeEncuentrosPara8 = new ArrayList<>(8);
+        listaDeEncuentrosPara8.addAll(Arrays.asList(41,38,16,24,13,20,30,35));
+
+        esconderRowDeLista(listaDeEncuentrosPara8);
+    }
+
+    private void esconderPara9Jugadores(){
+        ArrayList<Integer> listaDeEncuentrosPara9 = new ArrayList<>(17);
+        listaDeEncuentrosPara9.addAll(Arrays.asList(41,38,24,16,13,20,30,35,14,15,17,21,26,31,36,40,44));
+        //Todos los casilleros son un valor menos para encontrarlos en la lista
+
+        esconderRowDeLista(listaDeEncuentrosPara9);
+    }
+
+    private void esconderRowDeLista(ArrayList<Integer> lista){
+
+        for(Integer contador = 0; contador <= lista.size(); contador++){
+
+            Integer encuentro = lista.get(contador);
+
+            TableRow rowDeJugadores = listaEncuentrosRow.get(encuentro);
+
+            if (rowDeJugadores.isShown())
+                rowDeJugadores.setVisibility(View.INVISIBLE);
+        }
+    }
 
     public void onClick(View v){
-        Toast.makeText(getApplicationContext(), "Ejemplo mostro no es el texto final", Toast.LENGTH_SHORT).show();
+       switch (v.getId()){
+           case R.id.verTabla:
+               verTabla(v);
+               break;
+           default: break;
+       }
+
     }
 
     private void asignarEncuentos(){
@@ -183,4 +257,13 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
                 RE16,RE17,RE18,RE19,RE20,RE21,RE22,RE23,RE24,RE25,RE26,RE27,RE28,RE29,RE30,RE31,RE32,RE33,RE34,RE35,RE36,
                 RE37,RE38,RE39,RE40,RE41,RE42,RE43,RE44,RE45));
     }
+
+    public void verTabla(View v){
+        Intent intentTabla = new Intent(this, TablaPosiciones.class);
+
+        intentTabla.putExtra("PARTICIPANTES", cantidadJugadores);
+
+        startActivity(intentTabla);
+    }
+
 }

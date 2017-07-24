@@ -1,5 +1,6 @@
 package com.example.rodrigoboto.friendlyhomeleague;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.res.TypedArrayUtils;
 import android.support.v7.app.AppCompatActivity;
@@ -37,6 +38,12 @@ public class TablaPosiciones extends AppCompatActivity {
         volver = (FloatingActionButton)findViewById(R.id.volver);//TODO: hacer que este boton me devuelva a la activity anterior AKA tabla encuentros
         finalizar = (FloatingActionButton)findViewById(R.id.finalizar);//TODO: hacer que este boton me lleve a una pantalla que se muestren los primeros 3
         asignarPartidos();
+
+        Intent intentTabla = getIntent();
+        Bundle bundle2 = intentTabla.getExtras();
+        if (bundle2 != null){
+            Integer cantidadJugadores = Integer.parseInt(bundle2.get("PARTICIPANTES").toString());
+        }
     }
 
     private void asignarPartidos(){
