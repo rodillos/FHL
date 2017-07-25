@@ -13,8 +13,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView contador;
     FloatingActionButton mas, menos, reset, crear;
-    EditText edit1,edit2,edit3,edit4,edit5,edit6;
-    ArrayList<EditText> listaCampos = new ArrayList<>(16);
+    EditText edit1,edit2,edit3,edit4,edit5,edit6,edit7,edit8,edit9,edit10;
+    ArrayList<EditText> listaCampos = new ArrayList<>(10);
     Integer valorContador = 4;
     Integer valorMax = 10, valorMin = 4;
 
@@ -41,22 +41,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void asignadorEdit(){
-        edit1 = (EditText)findViewById(R.id.editText5);
+        edit1 = (EditText)findViewById(R.id.editText1);
         listaCampos.add(edit1);
-        edit2 = (EditText)findViewById(R.id.editText6);
+        edit2 = (EditText)findViewById(R.id.editText2);
         listaCampos.add(edit2);
-        edit3 = (EditText)findViewById(R.id.editText7);
+        edit3 = (EditText)findViewById(R.id.editText3);
         listaCampos.add(edit3);
-        edit4 = (EditText)findViewById(R.id.editText8);
+        edit4 = (EditText)findViewById(R.id.editText4);
         listaCampos.add(edit4);
-        edit5 = (EditText)findViewById(R.id.editText9);
+        edit5 = (EditText)findViewById(R.id.editText5);
         listaCampos.add(edit5);
-        edit6 = (EditText)findViewById(R.id.editText10);
+        edit6 = (EditText)findViewById(R.id.editText6);
         listaCampos.add(edit6);
-        for(Integer count = 0; count < 6; count++){
-            listaCampos.get(count).setVisibility(View.GONE);
-
-        }
+        edit7 = (EditText)findViewById(R.id.editText7);
+        listaCampos.add(edit7);
+        edit8 = (EditText)findViewById(R.id.editText8);
+        listaCampos.add(edit8);
+        edit9 = (EditText)findViewById(R.id.editText9);
+        listaCampos.add(edit9);
+        edit10 = (EditText)findViewById(R.id.editText10);
+        listaCampos.add(edit10);
     }
 
     @Override
@@ -71,15 +75,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.floatingActionButton2:
                 valorContador++;
-                mostrarOculatarCampo(1);
                 controlarValores();
+                mostrarOculatarCampo(1);
                 contador.setText(valorContador.toString());
                 break;
             case R.id.floatingActionButton3:
                 valorContador--;
-                mostrarOculatarCampo(2);
                 controlarValores();
-                contador.setText(valorContador.toString());
+                mostrarOculatarCampo(2);
                 break;
         }
     }
@@ -93,16 +96,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             contador.setText(valorMax.toString());
             valorContador = valorMax;
            Toast.makeText(getApplicationContext(), R.string.max, Toast.LENGTH_SHORT).show();
+        }else{
+            contador.setText(valorContador.toString());
         }
     }
 
     private void mostrarOculatarCampo(Integer valor){
         switch (valor) {
             case 1:
-                //listaCampos.get(valorContador - 5).setVisibility(View.VISIBLE);
+                listaCampos.get(valorContador -1).setVisibility(View.VISIBLE);
                 break;
             case 2:
-                //listaCampos.get(valorContador - 5).setVisibility(View.GONE);
+                listaCampos.get(valorContador -1).setVisibility(View.GONE);
                 break;
         }
     }
