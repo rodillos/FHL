@@ -2,6 +2,7 @@ package com.example.rodrigoboto.friendlyhomeleague;
 
 import android.content.Intent;
 import android.provider.MediaStore;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,19 +11,20 @@ import android.widget.RadioGroup;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class TablaEncuentros extends AppCompatActivity implements View.OnClickListener {
     Integer cantidadJugadores;
 
     TextView Jugador1, Jugador2, Jugador3, Jugador4, Jugador5, Jugador6, Jugador7, Jugador8, Jugador9,
             Jugador10;
-
-    ArrayList<TableRow> listaEncuentrosRow = new ArrayList<>(45);
-    ArrayList<RadioGroup> listaEncuentrosRadio = new ArrayList<>(45);
+    ArrayList<TextView> listaJugadores = new ArrayList<>(Arrays.asList(Jugador1, Jugador2, Jugador3, Jugador4, Jugador5, Jugador6, Jugador7, Jugador8, Jugador9,
+            Jugador10));
+    ArrayList<TableRow> listaEncuentrosRow = new ArrayList<>();
+    ArrayList<RadioGroup> listaEncuentrosRadio = new ArrayList<>();
+    ArrayList<String> listaDeNombres = new ArrayList<>();
 
     TableRow E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12, E13, E14, E15, E16, E17, E18, E19, E20, E21, E22, E23, E24,
             E25, E26, E27, E28, E29, E30, E31, E32, E33, E34, E35, E36, E37, E38, E39, E40, E41, E42, E43, E44, E45;
@@ -41,8 +43,9 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         Bundle bundle = intent.getExtras();
 
         if (bundle != null) {
-            String recibido = bundle.get("CANTIDAD").toString();
+            String recibido = bundle.getString("CANTIDAD");
             cantidadJugadores = Integer.parseInt(recibido);
+            listaDeNombres.addAll(bundle.getStringArrayList("NOMBRES"));
         }
 
         verTabla = (FloatingActionButton) findViewById(R.id.verTabla);
@@ -52,6 +55,7 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         volverAMain.setOnClickListener(this);
 
         esconderEncuentros(cantidadJugadores);
+        acoplarNombres(listaDeNombres);
     }
 
    private void esconderEncuentros(Integer cantidadJugadores){
@@ -266,4 +270,11 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         startActivity(intentTabla);
     }
 
+    private void acoplarNombres(ArrayList<String> listaDeNombres){
+
+        for (Integer i = 0; i < listaDeNombres.size(); i++){
+            while(listaDeNombres.get(i) != null)
+                listaJugadores.get(i).setText(listaDeNombres.get(i));
+        }
+    }
 }

@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.floatingActionButton1:
                 Toast.makeText(getApplicationContext(), R.string.reset, Toast.LENGTH_SHORT).show();
+                resetCampos();
                 break;
             case R.id.floatingActionButton2:
                 valorContador++;
@@ -108,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case 2:
                 listaCampos.get(valorContador -1).setVisibility(View.GONE);
+                listaCampos.get(valorContador -1).setText("");
                 break;
         }
     }
@@ -118,5 +120,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String cantidadJugadores = contador.getText().toString();
         intent.putExtra("CANTIDAD", cantidadJugadores);
         startActivity(intent);
+    }
+
+    private void resetCampos(){
+        contador.setText(valorMin.toString());
+        valorContador = valorMin;
+        for(Integer i = 0; i < 10; i++){
+            EditText campo = listaCampos.get(i);
+            campo.setText("");
+            if (i>3)
+                campo.setVisibility(View.GONE);
+        }
     }
 }
