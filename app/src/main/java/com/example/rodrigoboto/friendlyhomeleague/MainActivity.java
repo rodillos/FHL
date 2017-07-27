@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView contador;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ArrayList<EditText> listaCampos = new ArrayList<>(10);
     Integer valorContador = 4;
     Integer valorMax = 10, valorMin = 4;
-
+    ArrayList<String> listaNombres = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,25 +43,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void asignadorEdit(){
         edit1 = (EditText)findViewById(R.id.editText1);
-        listaCampos.add(edit1);
+
         edit2 = (EditText)findViewById(R.id.editText2);
-        listaCampos.add(edit2);
+
         edit3 = (EditText)findViewById(R.id.editText3);
-        listaCampos.add(edit3);
+
         edit4 = (EditText)findViewById(R.id.editText4);
-        listaCampos.add(edit4);
+
         edit5 = (EditText)findViewById(R.id.editText5);
-        listaCampos.add(edit5);
+
         edit6 = (EditText)findViewById(R.id.editText6);
-        listaCampos.add(edit6);
+
         edit7 = (EditText)findViewById(R.id.editText7);
-        listaCampos.add(edit7);
+
         edit8 = (EditText)findViewById(R.id.editText8);
-        listaCampos.add(edit8);
+
         edit9 = (EditText)findViewById(R.id.editText9);
-        listaCampos.add(edit9);
+
         edit10 = (EditText)findViewById(R.id.editText10);
-        listaCampos.add(edit10);
+
+        listaCampos.addAll(Arrays.asList(edit1,edit2,edit3,edit4,edit5,edit6,edit7,edit8,edit9,edit10));
+
+        crearListaContenidos(listaCampos,valorContador);
+    }
+
+    private void crearListaContenidos(ArrayList<EditText> lista, Integer cantidadJugadores){
+
+        for(Integer i = 0; i < cantidadJugadores; i++)
+
+            listaNombres.add(lista.get(i).getText().toString());
     }
 
     @Override
@@ -119,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = new Intent(this , TablaEncuentros.class);
         String cantidadJugadores = contador.getText().toString();
         intent.putExtra("CANTIDAD", cantidadJugadores);
+        intent.putStringArrayListExtra("NOMBRES",listaNombres);
         startActivity(intent);
     }
 

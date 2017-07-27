@@ -16,16 +16,14 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class TablaEncuentros extends AppCompatActivity implements View.OnClickListener {
-    Integer cantidadJugadores;
 
+    Integer cantidadJugadores;
     TextView Jugador1, Jugador2, Jugador3, Jugador4, Jugador5, Jugador6, Jugador7, Jugador8, Jugador9,
             Jugador10;
-    ArrayList<TextView> listaJugadores = new ArrayList<>(Arrays.asList(Jugador1, Jugador2, Jugador3, Jugador4, Jugador5, Jugador6, Jugador7, Jugador8, Jugador9,
-            Jugador10));
+    ArrayList<TextView> listaJugadores = new ArrayList<>();
     ArrayList<TableRow> listaEncuentrosRow = new ArrayList<>();
     ArrayList<RadioGroup> listaEncuentrosRadio = new ArrayList<>();
     ArrayList<String> listaDeNombres = new ArrayList<>();
-
     TableRow E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12, E13, E14, E15, E16, E17, E18, E19, E20, E21, E22, E23, E24,
             E25, E26, E27, E28, E29, E30, E31, E32, E33, E34, E35, E36, E37, E38, E39, E40, E41, E42, E43, E44, E45;
 
@@ -39,13 +37,16 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_tabla_encuentros);
         asignarEncuentos();
         asignarRadioEncuentros();
-        Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
+        asignarJugadores();
 
-        if (bundle != null) {
-            String recibido = bundle.getString("CANTIDAD");
+        Intent intent = getIntent();
+        Bundle cantidad = intent.getExtras();
+
+        listaDeNombres = intent.getStringArrayListExtra("NOMBRES");
+
+        if (cantidad != null && listaDeNombres !=null) {
+            String recibido = cantidad.getString("CANTIDAD");
             cantidadJugadores = Integer.parseInt(recibido);
-            listaDeNombres.addAll(bundle.getStringArrayList("NOMBRES"));
         }
 
         verTabla = (FloatingActionButton) findViewById(R.id.verTabla);
@@ -58,11 +59,26 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         acoplarNombres(listaDeNombres);
     }
 
+   private void asignarJugadores(){
+       Jugador1 = (TextView) findViewById(R.id.jugador1);
+       Jugador2 = (TextView) findViewById(R.id.jugador2);
+       Jugador3 = (TextView) findViewById(R.id.jugador3);
+       Jugador4 = (TextView) findViewById(R.id.jugador4);
+       Jugador5 = (TextView) findViewById(R.id.jugador5);
+       Jugador6 = (TextView) findViewById(R.id.jugador6);
+       Jugador7 = (TextView) findViewById(R.id.jugador7);
+       Jugador8 = (TextView) findViewById(R.id.jugador8);
+       Jugador9 = (TextView) findViewById(R.id.jugador9);
+       Jugador10 = (TextView) findViewById(R.id.jugador10);
+
+       listaJugadores.addAll(Arrays.asList(Jugador1, Jugador2, Jugador3, Jugador4, Jugador5, Jugador6, Jugador7, Jugador8, Jugador9,
+               Jugador10));
+   }
+
    private void esconderEncuentros(Integer cantidadJugadores){
         switch (cantidadJugadores){
             case 4:
                 esconderMaximoEncuentros();
-            //TODO: implementa esconderPara5Jugadores, y asi cada uno implementa el siguiente para reciclcar codigo
                 break;
             case 5:
                 esconderPara5Jugadores();
@@ -86,8 +102,7 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
     private void esconderMaximoEncuentros(){
         esconderPara5Jugadores();
 
-        ArrayList<Integer>listaDeEncuentrosPara4 = new ArrayList<>(4);
-        listaDeEncuentrosPara4.addAll(Arrays.asList(27,18,12,34));
+        ArrayList<Integer>listaDeEncuentrosPara4 = new ArrayList<>(Arrays.asList(27,18,12,34));
 
         esconderRowDeLista(listaDeEncuentrosPara4);
     }
@@ -97,8 +112,7 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
     private void esconderPara5Jugadores(){
         esconderPara6Jugadores();
 
-        ArrayList<Integer>listaDeEncuentrosPara5 = new ArrayList<>(5);
-        listaDeEncuentrosPara5.addAll(Arrays.asList(22,28,42,6,39));
+        ArrayList<Integer>listaDeEncuentrosPara5 = new ArrayList<>(Arrays.asList(22,28,42,6,39));
 
         esconderRowDeLista(listaDeEncuentrosPara5);
     }
@@ -106,8 +120,7 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
     private void esconderPara6Jugadores(){
         esconderPara7Jugadores();
 
-        ArrayList<Integer>listaDeEncuentrosPara6 = new ArrayList<>(6);
-        listaDeEncuentrosPara6.addAll(Arrays.asList(32,23,11,29,43,8));
+        ArrayList<Integer>listaDeEncuentrosPara6 = new ArrayList<>(Arrays.asList(32,23,11,29,43,8));
 
         esconderRowDeLista(listaDeEncuentrosPara6);
     }
@@ -115,31 +128,28 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
     private void esconderPara7Jugadores(){
         esconderPara8Jugadores();
 
-        ArrayList<Integer>listaDeEncuentrosPara7 = new ArrayList<>(7);
-        listaDeEncuentrosPara7.addAll(Arrays.asList(37,33,19,7,9,25,10));
+        ArrayList<Integer>listaDeEncuentrosPara7 = new ArrayList<>((Arrays.asList(37,33,19,7,9,25,10)));
 
         esconderRowDeLista(listaDeEncuentrosPara7);
     }
 
     private void esconderPara8Jugadores() {
         esconderPara9Jugadores();
-        ArrayList<Integer> listaDeEncuentrosPara8 = new ArrayList<>(8);
-        listaDeEncuentrosPara8.addAll(Arrays.asList(41,38,16,24,13,20,30,35));
+
+        ArrayList<Integer> listaDeEncuentrosPara8 = new ArrayList<>(Arrays.asList(41,38,16,24,13,20,30,35));
 
         esconderRowDeLista(listaDeEncuentrosPara8);
     }
 
     private void esconderPara9Jugadores(){
-        ArrayList<Integer> listaDeEncuentrosPara9 = new ArrayList<>(17);
-        listaDeEncuentrosPara9.addAll(Arrays.asList(41,38,24,16,13,20,30,35,14,15,17,21,26,31,36,40,44));
-        //Todos los casilleros son un valor menos para encontrarlos en la lista
+        ArrayList<Integer> listaDeEncuentrosPara9 = new ArrayList<>(Arrays.asList(41,38,24,16,13,20,30,35,14,15,17,21,26,31,36,40,44));
 
         esconderRowDeLista(listaDeEncuentrosPara9);
     }
 
     private void esconderRowDeLista(ArrayList<Integer> lista){
 
-        for(Integer contador = 0; contador <= lista.size(); contador++){
+        for(Integer contador = 0; contador < lista.size(); contador++){
 
             Integer encuentro = lista.get(contador);
 
@@ -271,10 +281,13 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
     }
 
     private void acoplarNombres(ArrayList<String> listaDeNombres){
-
-        for (Integer i = 0; i < listaDeNombres.size(); i++){
-            while(listaDeNombres.get(i) != null)
-                listaJugadores.get(i).setText(listaDeNombres.get(i));
+        Integer i = 0;
+        TextView Jugador = listaJugadores.get(i);
+        String Nombre = listaDeNombres.get(i).toString();
+        for (i = 0; i < listaDeNombres.size(); i++){
+                Jugador.setText(Nombre);
+            Jugador = listaJugadores.get(i);
+            Nombre = listaDeNombres.get(i).toString();
         }
     }
 }
