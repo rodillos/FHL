@@ -154,7 +154,7 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
 
             TableRow rowDeJugadores = listaEncuentrosRow.get(encuentro);
 
-            rowDeJugadores.setVisibility(View.INVISIBLE);
+            rowDeJugadores.setVisibility(View.GONE);
         }
     }
 
