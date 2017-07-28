@@ -63,8 +63,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edit10 = (EditText)findViewById(R.id.editText10);
 
         listaCampos.addAll(Arrays.asList(edit1,edit2,edit3,edit4,edit5,edit6,edit7,edit8,edit9,edit10));
-
-        crearListaContenidos(listaCampos,valorContador);
     }
 
     private void crearListaContenidos(ArrayList<EditText> lista, Integer cantidadJugadores){
@@ -126,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void generarTorneo(View v){
-
+        crearListaContenidos(listaCampos,valorContador);
         Intent intent = new Intent(this , TablaEncuentros.class);
         String cantidadJugadores = contador.getText().toString();
         intent.putExtra("CANTIDAD", cantidadJugadores);
@@ -135,12 +133,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void resetCampos(){
+        Integer i;
         contador.setText(valorMin.toString());
         valorContador = valorMin;
-        for(Integer i = 0; i < 10; i++){
+        for(  i = 0;i < valorMax; i++){
             EditText campo = listaCampos.get(i);
             campo.setText("");
-            if (i>3)
+            if (i > 3)
                 campo.setVisibility(View.GONE);
         }
     }

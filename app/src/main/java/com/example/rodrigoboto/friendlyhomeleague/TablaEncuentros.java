@@ -13,7 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Objects;
 
 public class TablaEncuentros extends AppCompatActivity implements View.OnClickListener {
 
@@ -155,8 +154,7 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
 
             TableRow rowDeJugadores = listaEncuentrosRow.get(encuentro);
 
-            if (rowDeJugadores.isShown())
-                rowDeJugadores.setVisibility(View.INVISIBLE);
+            rowDeJugadores.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -276,18 +274,19 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         Intent intentTabla = new Intent(this, TablaPosiciones.class);
 
         intentTabla.putExtra("PARTICIPANTES", cantidadJugadores);
+        intentTabla.putStringArrayListExtra("NOMBRES",listaDeNombres);
 
         startActivity(intentTabla);
     }
 
     private void acoplarNombres(ArrayList<String> listaDeNombres){
-        Integer i = 0;
-        TextView Jugador = listaJugadores.get(i);
-        String Nombre = listaDeNombres.get(i).toString();
+        Integer i;
+        TextView Jugador;
+        String Nombre;
         for (i = 0; i < listaDeNombres.size(); i++){
-                Jugador.setText(Nombre);
             Jugador = listaJugadores.get(i);
             Nombre = listaDeNombres.get(i).toString();
+            Jugador.setText(Nombre);
         }
     }
 }

@@ -40,10 +40,13 @@ public class TablaPosiciones extends AppCompatActivity {
         asignarPartidos();
 
         Intent intentTabla = getIntent();
-        Bundle bundle2 = intentTabla.getExtras();
-        if (bundle2 != null){
-            Integer cantidadJugadores = Integer.parseInt(bundle2.get("PARTICIPANTES").toString());
+        Bundle bundle = intentTabla.getExtras();
+        if (bundle != null){
+            Integer cantidadJugadores = Integer.parseInt(bundle.get("PARTICIPANTES").toString());
         }
+
+        ArrayList<String> nombres = intentTabla.getStringArrayListExtra("NOMBRES");
+
     }
 
     private void asignarPartidos(){
