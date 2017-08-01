@@ -17,12 +17,14 @@ public class TablaPosiciones extends AppCompatActivity {
     //esconder es la cantidad de jugadores que no van a jugar , es decir
     // 10- cantidad de jugadores es esconder, que por defecto es 6 TODO: traer cantidad de jugadores desde la primer activity
     Integer esconder = 6;
+    TextView J1,J2,J3,J4,J5,J6,J7,J8,J9,J10;
     TableRow jugador5, jugador6,jugador7,jugador8,jugador9,jugador10;
     TextView pJ1,pJ2,pJ3,pJ4,pJ5,pJ6,pJ7,
             pJ8,pJ9,pJ10,pG1, pE1, pP1, p1,pG2, pE2, pP2, p2,pG3, pE3, pP3, p3,pG4, pE4, pP4, p4,
             pG5, pE5, pP5, p5,pG6, pE6, pP6, p6,pG7, pE7, pP7, p7,pG8, pE8, pP8, p8,pG9, pE9, pP9,
             p9,pG10, pE10, pP10, p10, PTS1,PTS2,PTS3,PTS4,PTS5,PTS6,PTS7,PTS8,PTS9,PTS10;
     FloatingActionButton volver , finalizar;
+    ArrayList<TextView> Jugadores = new ArrayList<>();
     ArrayList<TextView> listaPJ = new ArrayList<>(10);// en 0 esta lo correspondiente a 10
     ArrayList<TextView> listaPG = new ArrayList<>(10);// en 0 esta lo correspondiente a 10
     ArrayList<TextView> listaPE = new ArrayList<>(10);// en 0 esta lo correspondiente a 10
@@ -46,6 +48,46 @@ public class TablaPosiciones extends AppCompatActivity {
         }
 
         ArrayList<String> nombres = intentTabla.getStringArrayListExtra("NOMBRES");
+        asignarJugadores(nombres);
+
+        calcularPuntos();
+
+
+    }
+
+    private void asignarJugadores(ArrayList<String> lista){
+        J1 = (TextView) findViewById(R.id.jugador1);
+            Jugadores.add(J1);
+        J2 = (TextView) findViewById(R.id.jugador2);
+            Jugadores.add(J2);
+        J3 = (TextView) findViewById(R.id.jugador3);
+            Jugadores.add(J3);
+        J4 = (TextView) findViewById(R.id.jugador4);
+            Jugadores.add(J4);
+        J5 = (TextView) findViewById(R.id.jugador5);
+            Jugadores.add(J5);
+        J6 = (TextView) findViewById(R.id.jugador6);
+            Jugadores.add(J6);
+        J7 = (TextView) findViewById(R.id.jugador7);
+            Jugadores.add(J7);
+        J8 = (TextView) findViewById(R.id.jugador8);
+            Jugadores.add(J8);
+        J9 = (TextView) findViewById(R.id.jugador9);
+            Jugadores.add(J9);
+        J10 = (TextView) findViewById(R.id.jugador10);
+            Jugadores.add(J10);
+
+        asiganarNombres(lista);
+    }
+
+    private void asiganarNombres(ArrayList<String> lista){
+
+        for (Integer i = 0; i < lista.size(); i++)
+            Jugadores.get(i).setText(lista.get(i));
+
+    }
+
+    private void calcularPuntos(){
 
     }
 

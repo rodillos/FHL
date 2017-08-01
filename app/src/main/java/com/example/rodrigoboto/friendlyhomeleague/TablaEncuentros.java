@@ -11,15 +11,18 @@ import android.widget.RadioGroup;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TablaEncuentros extends AppCompatActivity implements View.OnClickListener {
 
     Integer cantidadJugadores;
-    TextView Jugador1, Jugador2, Jugador3, Jugador4, Jugador5, Jugador6, Jugador7, Jugador8, Jugador9,
-            Jugador10;
-    ArrayList<TextView> listaJugadores = new ArrayList<>();
+    ArrayList<TextView> Jugador1, Jugador2, Jugador3, Jugador4, Jugador5, Jugador6, Jugador7,
+            Jugador8, Jugador9, Jugador10;
+    ArrayList<ArrayList<TextView>> listaJugadores = new ArrayList<>();
     ArrayList<TableRow> listaEncuentrosRow = new ArrayList<>();
     ArrayList<RadioGroup> listaEncuentrosRadio = new ArrayList<>();
     ArrayList<String> listaDeNombres = new ArrayList<>();
@@ -58,21 +61,241 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         acoplarNombres(listaDeNombres);
     }
 
-   private void asignarJugadores(){
-       Jugador1 = (TextView) findViewById(R.id.jugador1);
-       Jugador2 = (TextView) findViewById(R.id.jugador2);
-       Jugador3 = (TextView) findViewById(R.id.jugador3);
-       Jugador4 = (TextView) findViewById(R.id.jugador4);
-       Jugador5 = (TextView) findViewById(R.id.jugador5);
-       Jugador6 = (TextView) findViewById(R.id.jugador6);
-       Jugador7 = (TextView) findViewById(R.id.jugador7);
-       Jugador8 = (TextView) findViewById(R.id.jugador8);
-       Jugador9 = (TextView) findViewById(R.id.jugador9);
-       Jugador10 = (TextView) findViewById(R.id.jugador10);
+   private void asignarJugadores() {
+       asignarJugador1();
+       asignarJugador2();
+       asignarJugador3();
+       asignarJugador4();
+       asignarJugador5();
+       asignarJugador6();
+       asignarJugador7();
+       asignarJugador8();
+       asignarJugador9();
+       asignarJugador10();
+       listaJugadores.addAll(Arrays.asList(Jugador1,Jugador2,Jugador3,Jugador4,Jugador5,Jugador6,Jugador7,Jugador8,Jugador9,Jugador10));
 
-       listaJugadores.addAll(Arrays.asList(Jugador1, Jugador2, Jugador3, Jugador4, Jugador5, Jugador6, Jugador7, Jugador8, Jugador9,
-               Jugador10));
    }
+
+   private void asignarJugador1() {
+       Jugador1 = new ArrayList<>();
+           TextView jugador = (TextView) findViewById(R.id.jugador1);
+           Jugador1.add(jugador);
+           jugador = (TextView) findViewById(R.id.jugador11);
+           Jugador1.add(jugador);
+           jugador = (TextView) findViewById(R.id.jugador12);
+           Jugador1.add(jugador);
+           jugador = (TextView) findViewById(R.id.jugador13);
+           Jugador1.add(jugador);
+           jugador = (TextView) findViewById(R.id.jugador14);
+           Jugador1.add(jugador);
+           jugador = (TextView) findViewById(R.id.jugador15);
+           Jugador1.add(jugador);
+           jugador = (TextView) findViewById(R.id.jugador16);
+           Jugador1.add(jugador);
+           jugador = (TextView) findViewById(R.id.jugador17);
+           Jugador1.add(jugador);
+           jugador = (TextView) findViewById(R.id.jugador18);
+           Jugador1.add(jugador);
+       }
+
+   private void asignarJugador2(){
+       Jugador2 = new ArrayList<>();
+       TextView jugador = (TextView) findViewById(R.id.jugador2);
+       Jugador2.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador21);
+       Jugador2.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador22);
+       Jugador2.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador23);
+       Jugador2.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador24);
+       Jugador2.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador25);
+       Jugador2.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador26);
+       Jugador2.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador27);
+       Jugador2.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador28);
+       Jugador2.add(jugador);
+   }
+
+   private void asignarJugador3() {
+       Jugador3 = new ArrayList<>();
+       TextView jugador = (TextView) findViewById(R.id.jugador3);
+       Jugador3.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador31);
+       Jugador3.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador32);
+       Jugador3.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador33);
+       Jugador3.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador34);
+       Jugador3.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador35);
+       Jugador3.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador36);
+       Jugador3.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador37);
+       Jugador3.add(jugador);
+       jugador = (TextView) findViewById(R.id.jugador38);
+       Jugador3.add(jugador);
+   }
+
+    private void asignarJugador4() {
+        Jugador4 = new ArrayList<>();
+        TextView jugador = (TextView) findViewById(R.id.jugador4);
+        Jugador4.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador41);
+        Jugador4.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador42);
+        Jugador4.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador43);
+        Jugador4.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador44);
+        Jugador4.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador45);
+        Jugador4.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador46);
+        Jugador4.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador47);
+        Jugador4.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador48);
+        Jugador4.add(jugador);
+    }
+
+    private void asignarJugador5() {
+        Jugador5 = new ArrayList<>();
+        TextView jugador = (TextView) findViewById(R.id.jugador5);
+        Jugador5.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador51);
+        Jugador5.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador52);
+        Jugador5.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador53);
+        Jugador5.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador54);
+        Jugador5.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador55);
+        Jugador5.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador56);
+        Jugador5.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador57);
+        Jugador5.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador58);
+        Jugador5.add(jugador);
+    }
+
+    private void asignarJugador6() {
+        Jugador6 = new ArrayList<>();
+        TextView jugador = (TextView) findViewById(R.id.jugador6);
+        Jugador6.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador61);
+        Jugador6.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador62);
+        Jugador6.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador63);
+        Jugador6.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador64);
+        Jugador6.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador65);
+        Jugador6.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador66);
+        Jugador6.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador67);
+        Jugador6.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador68);
+        Jugador6.add(jugador);
+    }
+
+    private void asignarJugador7() {
+        Jugador7 = new ArrayList<>();
+        TextView jugador = (TextView) findViewById(R.id.jugador7);
+        Jugador7.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador71);
+        Jugador7.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador72);
+        Jugador7.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador73);
+        Jugador7.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador74);
+        Jugador7.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador75);
+        Jugador7.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador76);
+        Jugador7.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador77);
+        Jugador7.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador78);
+        Jugador7.add(jugador);
+    }
+
+    private void asignarJugador8() {
+        Jugador8 = new ArrayList<>();
+        TextView jugador = (TextView) findViewById(R.id.jugador8);
+        Jugador8.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador81);
+        Jugador8.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador82);
+        Jugador8.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador83);
+        Jugador8.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador84);
+        Jugador8.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador85);
+        Jugador8.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador86);
+        Jugador8.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador87);
+        Jugador8.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador88);
+        Jugador8.add(jugador);
+    }
+
+    private void asignarJugador9() {
+        Jugador9 = new ArrayList<>();
+        TextView jugador = (TextView) findViewById(R.id.jugador9);
+        Jugador9.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador91);
+        Jugador9.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador92);
+        Jugador9.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador93);
+        Jugador9.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador94);
+        Jugador9.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador95);
+        Jugador9.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador96);
+        Jugador9.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador97);
+        Jugador9.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador98);
+        Jugador9.add(jugador);
+    }
+
+    private void asignarJugador10() {
+        Jugador10 = new ArrayList<>();
+        TextView jugador = (TextView) findViewById(R.id.jugador10);
+        Jugador10.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador101);
+        Jugador10.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador102);
+        Jugador10.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador103);
+        Jugador10.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador104);
+        Jugador10.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador105);
+        Jugador10.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador106);
+        Jugador10.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador107);
+        Jugador10.add(jugador);
+        jugador = (TextView) findViewById(R.id.jugador108);
+        Jugador10.add(jugador);
+    }
+
 
    private void esconderEncuentros(Integer cantidadJugadores){
         switch (cantidadJugadores){
@@ -281,12 +504,12 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
 
     private void acoplarNombres(ArrayList<String> listaDeNombres){
         Integer i;
-        TextView Jugador;
-        String Nombre;
         for (i = 0; i < listaDeNombres.size(); i++){
-            Jugador = listaJugadores.get(i);
-            Nombre = listaDeNombres.get(i).toString();
-            Jugador.setText(Nombre);
+            acoplarNombreAJugador(listaJugadores.get(i),listaDeNombres.get(i));
         }
+    }
+   private void acoplarNombreAJugador(ArrayList<TextView> Jugador, String Nombre){
+       for (Integer i = 0; i < Jugador.size(); i++)
+           Jugador.get(i).setText(Nombre);
     }
 }
