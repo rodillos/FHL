@@ -69,10 +69,11 @@ public class TablaPosiciones extends AppCompatActivity {
         ArrayList<String> nombres = intentTabla.getStringArrayListExtra("NOMBRES");
         crearJugadores(nombres);
         calcularPuntos();
-
+        calcularPosiciones();
 
     }
 
+    //asigna todos los datos asocioados al jugador a una variable de clase jugadorDatos
     private void crearJugadores(ArrayList<String> listaNombres){
 
         asignarJugadores();
@@ -106,6 +107,25 @@ public class TablaPosiciones extends AppCompatActivity {
         J10 = (TextView) findViewById(R.id.jugador10);
     }
 
+    //calcula las posiciones de los jugadores de acuerdo a los puntos de cada uno
+    private void calcularPosiciones(){
+
+        String auxiliar, auxiliar2;
+        
+        for(int i=1;i < Jugadores.size();i++){
+            for (int j=0 ; j < Jugadores.size() - 1; j++){
+                Integer puntosJugador1 = Integer.parseInt(Jugadores.get(j).puntos.toString());
+                Integer puntosJugador2 = Integer.parseInt(Jugadores.get(j+1).puntos.toString());
+                if ( puntosJugador1 < puntosJugador2){
+                    auxiliar = Jugadores.get(j).posicion.getText().toString();
+                    auxiliar2 = Jugadores.get(j+1).posicion.getText().toString();
+                    Jugadores.get(j).posicion.setText(auxiliar2);
+                    Jugadores.get(j+1).posicion.setText(auxiliar);
+                    }
+                }
+            }
+        }
+
     private void asiganarNombres(ArrayList<String> lista) {
 
         for (Integer i = 0; i < lista.size(); i++)
@@ -113,6 +133,7 @@ public class TablaPosiciones extends AppCompatActivity {
 
     }
 
+    //calcula los puntos para TODOS los jugadores
     private void calcularPuntos() {
 
         for(Integer i = 0; i> 10; i++)
@@ -120,6 +141,7 @@ public class TablaPosiciones extends AppCompatActivity {
 
     }
 
+    //Calcula los puntos para cada jugador
     private void calcularPuntosJugador(jugadorDatos jugador){
 
         Integer puntos;
@@ -131,7 +153,9 @@ public class TablaPosiciones extends AppCompatActivity {
         jugador.puntos.setText(puntos.toString());
     }
 
+    //asigna las ids de los partidos (jugados,ganados,empatados y perdidos), puntos, y posiciones
     private void asignarPartidos() {
+
         pJ1 = (TextView) findViewById(R.id.PJ1);
         pJ2 = (TextView) findViewById(R.id.PJ2);
         pJ3 = (TextView) findViewById(R.id.PJ3);
@@ -200,6 +224,7 @@ public class TablaPosiciones extends AppCompatActivity {
         listaPTS.addAll(Arrays.asList(PTS10, PTS1, PTS2, PTS3, PTS4, PTS5, PTS6, PTS7, PTS8, PTS9));
     }
 
+    //asigna las filas que pueden ocultarse
     private void asignarJugadoresVariables() {
         fila5 = (TableRow) findViewById(R.id.fila5); //6
 
@@ -215,6 +240,7 @@ public class TablaPosiciones extends AppCompatActivity {
 
     }
 
+    //esconde dependiendo la cantidad de 'esconder'
     private void esconderJugadorVariable(Integer esconder) {
         if (esconder == 6)
             fila5.setVisibility(View.GONE);
@@ -230,37 +256,6 @@ public class TablaPosiciones extends AppCompatActivity {
             fila10.setVisibility(View.GONE);
     }
 
-    private void calcularPosiciones() {
-        ArrayList<String> listaPosicionesPorPuntos = new ArrayList<>();
-        listaPosicionesPorPuntos.add(PTS1.toString());
 
-        //hacer de esto una fucnion aparte, que sea recursiva, para poder ir reempazando los distintos valores de las tablas, sin hacer tanto codigo
-        for (Integer i = 1; i > 10; i++) {
-            if (esMayor(listaPTS.get(i), listaPosicionesPorPuntos.get(0))) {
-                acomodarEnLista(i,listaPosicionesPorPuntos.get(i));
-                if (esMayor(listaPosicionesPorPuntos.get(0), listaPosicionesPorPuntos.get(i)))
-                    listaPosicionesPorPuntos.add(i, listaPosicionesPorPuntos.get(0));
-                listaPosicionesPorPuntos.add(0, listaPTS.get(i).toString());
-            }
-        }
-        //deberia hacer en paralelo el cambio de posicion del jugador, de acuerdo en que posicion de la tabla esté
-    }
-
-    private boolean esMayor(TextView elementoAComparar, String supuestoMayor) {
-        Integer elemento = Integer.parseInt(elementoAComparar.toString());
-
-        if(elemento > Integer.parseInt(supuestoMayor))
-            return true;
-        else
-            return false;
-    }
-
-    private void acomodarEnLista(Integer contador, String puntos){
-
-        if( esMayor(listaPTS.get(contador),puntos))
-
-
-
-    }
 }
 

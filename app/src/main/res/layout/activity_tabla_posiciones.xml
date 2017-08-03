@@ -114,6 +114,16 @@
                 android:textAlignment="center"
                 android:textSize="12sp" />
 
+            <TextView
+                android:id="@+id/cabeceraPuntos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="Roboto medium"
+                android:text="@string/cabeceraPuntos"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
         </TableRow>
 
         <View
@@ -186,6 +196,17 @@
                 android:layout_column="5"
                 />
 
+            <TextView
+                android:id="@+id/Pts1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/puntos"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="6"
+                />
+
         </TableRow>
 
         <TableRow
@@ -253,6 +274,17 @@
                 android:textAlignment="center"
                 android:textSize="15dp"
                 android:layout_column="5"/>
+
+            <TextView
+                android:id="@+id/Pts2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/puntos"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="6"
+                />
         </TableRow>
 
         <TableRow
@@ -320,6 +352,16 @@
                 android:textSize="15dp"
                 android:layout_column="5"/>
 
+            <TextView
+                android:id="@+id/Pts3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/puntos"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="6"
+                />
         </TableRow>
 
         <TableRow
@@ -387,6 +429,17 @@
                 android:textAlignment="center"
                 android:textSize="15dp"
                 android:layout_column="5"/>
+
+            <TextView
+                android:id="@+id/Pts4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/puntos"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="6"
+                />
         </TableRow>
 
         <TableRow
@@ -456,6 +509,17 @@
                 android:textAlignment="center"
                 android:textSize="15dp"
                 android:layout_column="5"/>
+
+            <TextView
+                android:id="@+id/Pts5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/puntos"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="6"
+                />
         </TableRow>
 
         <TableRow
@@ -524,6 +588,17 @@
                 android:textAlignment="center"
                 android:textSize="15dp"
                 android:layout_column="5"/>
+
+            <TextView
+                android:id="@+id/Pts6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/puntos"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="6"
+                />
         </TableRow>
 
         <TableRow
@@ -593,6 +668,18 @@
                 android:textAlignment="center"
                 android:textSize="15dp"
                 android:layout_column="5"/>
+
+            <TextView
+                android:id="@+id/Pts7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/puntos"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="6"
+                />
+
         </TableRow>
 
         <TableRow
@@ -662,6 +749,18 @@
                 android:textSize="15dp"
                 android:layout_column="5"
                 />
+
+            <TextView
+                android:id="@+id/Pts8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/puntos"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="6"
+                />
+
         </TableRow>
 
         <TableRow
@@ -729,6 +828,18 @@
                 android:textAlignment="center"
                 android:textSize="15dp"
                 android:layout_column="5"/>
+
+            <TextView
+                android:id="@+id/Pts9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/puntos"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="6"
+                />
+
         </TableRow>
 
         <TableRow
@@ -797,6 +908,18 @@
                 android:textAlignment="center"
                 android:textSize="15dp"
                 android:layout_column="5"/>
+
+            <TextView
+                android:id="@+id/Pts10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/puntos"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_column="6"
+                />
+
         </TableRow>
     </TableLayout>
 

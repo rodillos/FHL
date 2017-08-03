@@ -75,4 +75,7 @@
     <string name="PG0">0</string>
     <string name="PE0">0</string>
     <string name="PP0">0</string>
+    <string name="cabeceraPuntos">Pts</string>
+    <string name="puntos">0</string>
+
 </resources>
