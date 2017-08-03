@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         listaCampos.addAll(Arrays.asList(edit1,edit2,edit3,edit4,edit5,edit6,edit7,edit8,edit9,edit10));
     }
 
+    //crea la lista con los nombres
     private void crearListaContenidos(ArrayList<EditText> lista, Integer cantidadJugadores){
 
         for(Integer i = 0; i < cantidadJugadores; i++)

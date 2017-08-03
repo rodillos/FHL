@@ -38,17 +38,40 @@ public class TablaPosiciones extends AppCompatActivity {
     ArrayList<TextView> listaPTS = new ArrayList<>(10);// en 0 esta lo correspondiente a 10
 
     class jugadorDatos {
+        //String id / nombre;
+        //Integer partidosJugados,partidosJugados, partidosGanados,partidosEmpatados,
+        // partidosPerdidos, puntos, posicion;
+        ArrayList<Integer> partidosLocal = new ArrayList<>();
+        ArrayList<Integer> partidosVisitante = new ArrayList<>();
+
         TextView id, partidosJugados, partidosGanados,partidosEmpatados,partidosPerdidos, puntos, posicion;
 
         public jugadorDatos(TextView id,TextView pj,TextView pg,TextView pe,TextView pp,TextView pts, TextView pos){
             this.id = id;
             this.partidosJugados = pj;
+            this.partidosGanados = pg;
             this.partidosEmpatados = pe;
             this.partidosPerdidos = pp;
             this.puntos = pts;
             this.posicion = pos;
+
         }
 
+        public void setPartidosLocal(ArrayList<Integer> local){
+            this.partidosLocal = local;
+        }
+
+        public ArrayList<Integer> getPartidosLocal(){
+            return this.partidosLocal;
+        }
+
+        public void setPartidosVisitante(ArrayList<Integer> visitante){
+            this.partidosVisitante = visitante;
+        }
+
+        public ArrayList<Integer> getPartidosvisitante(){
+            return this.partidosVisitante;
+        }
     }
 
     @Override
@@ -256,6 +279,22 @@ public class TablaPosiciones extends AppCompatActivity {
             fila10.setVisibility(View.GONE);
     }
 
+    //For que implementa definirResultadosPorJugador a todos los Jugadores
+    private void definirResultadoPartidos(){
 
+        for (Integer i = 0; i > Jugadores.size(); i++)
+            definirResultadosPorJugador(Jugadores.get(i));
+    }
+
+    private void definirResultadosPorJugador(jugadorDatos jugador){
+
+        ArrayList<Integer> listita = jugador.getPartidosLocal();
+        for (Integer i = 0; i < listita.size(); i++)
+            //no se que hacer si que venga ya el resultado de los partidos desde la anterior activity
+            // o se deberia calcular acá, ahora  es muy tarde, mañana u hoy a la ncohe, lo pensamos bien
+            //para calcular aca se deberia tener accseso a la lista con los radio group y con el
+        // switch preguntar si es 1,2 o 3 para asi saber si GEP .
+
+    }
 }
 

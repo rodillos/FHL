@@ -17,6 +17,20 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+class jugadorDatos {
+    TextView id, partidosJugados, partidosGanados,partidosEmpatados,partidosPerdidos, puntos, posicion;
+
+    public jugadorDatos(TextView id,TextView pj,TextView pg,TextView pe,TextView pp,TextView pts, TextView pos){
+        this.id = id;
+        this.partidosJugados = pj;
+        this.partidosEmpatados = pe;
+        this.partidosPerdidos = pp;
+        this.puntos = pts;
+        this.posicion = pos;
+    }
+
+}
+
 public class TablaEncuentros extends AppCompatActivity implements View.OnClickListener {
 
     Integer cantidadJugadores;
@@ -296,7 +310,7 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         Jugador10.add(jugador);
     }
 
-
+    //selelctor que dependiendo la cantidad de jugadores (obtenida por parametro) ejecuta esconderpara...
    private void esconderEncuentros(Integer cantidadJugadores){
         switch (cantidadJugadores){
             case 4:
@@ -321,6 +335,7 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+    //contiene las filas que se deben ocultar si hay 6 jugadores, ejecutando el de 9 , 8 , 7, 6 y 5
     private void esconderMaximoEncuentros(){
         esconderPara5Jugadores();
 
@@ -329,8 +344,7 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         esconderRowDeLista(listaDeEncuentrosPara4);
     }
 
-
-
+    //contiene las filas que se deben ocultar si hay 5 jugadores, ejecutando el de 9 , 8 , 7 y 6
     private void esconderPara5Jugadores(){
         esconderPara6Jugadores();
 
@@ -339,6 +353,7 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         esconderRowDeLista(listaDeEncuentrosPara5);
     }
 
+    //contiene las filas que se deben ocultar si hay 6 jugadores, ejecutando el de 9 , 8 y 7
     private void esconderPara6Jugadores(){
         esconderPara7Jugadores();
 
@@ -347,6 +362,7 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         esconderRowDeLista(listaDeEncuentrosPara6);
     }
 
+    //contiene las filas que se deben ocultar si hay 7 jugadores, ejecutando el de 9 y 8
     private void esconderPara7Jugadores(){
         esconderPara8Jugadores();
 
@@ -355,6 +371,7 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         esconderRowDeLista(listaDeEncuentrosPara7);
     }
 
+    //contiene las filas que se deben ocultar si hay 8 jugadores, ejecutando el de 9
     private void esconderPara8Jugadores() {
         esconderPara9Jugadores();
 
@@ -363,12 +380,14 @@ public class TablaEncuentros extends AppCompatActivity implements View.OnClickLi
         esconderRowDeLista(listaDeEncuentrosPara8);
     }
 
+    //contiene las filas que se deben ocultar si hay 9 jugadores
     private void esconderPara9Jugadores(){
         ArrayList<Integer> listaDeEncuentrosPara9 = new ArrayList<>(Arrays.asList(41,38,24,16,13,20,30,35,14,15,17,21,26,31,36,40,44));
 
         esconderRowDeLista(listaDeEncuentrosPara9);
     }
 
+    //esconde las filas (correspondientes los encuentros) que se les pasan por parametro
     private void esconderRowDeLista(ArrayList<Integer> lista){
 
         for(Integer contador = 0; contador < lista.size(); contador++){
