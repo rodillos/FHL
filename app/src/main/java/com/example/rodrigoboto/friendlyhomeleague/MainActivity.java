@@ -8,17 +8,21 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.net.Inet4Address;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
     TextView contador;
     FloatingActionButton mas, menos, reset, crear;
     EditText edit1,edit2,edit3,edit4,edit5,edit6,edit7,edit8,edit9,edit10;
-    ArrayList<EditText> listaCampos = new ArrayList<>(10);
     Integer valorContador = 4;
     Integer valorMax = 10, valorMin = 4;
-    ArrayList<String> listaNombres = new ArrayList<>();
+    ArrayList<EditText> listaCampos = new ArrayList<>(valorMax);
+    ArrayList<String> listaNombres = new ArrayList<>(valorMax);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,10 +71,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //crea la lista con los nombres
     private void crearListaContenidos(ArrayList<EditText> lista, Integer cantidadJugadores){
-
-        for(Integer i = 0; i < cantidadJugadores; i++)
-
-            listaNombres.add(lista.get(i).getText().toString());
+        String nombre;
+        for(Integer i = 0; i < cantidadJugadores; i++) {
+            nombre = lista.get(i).toString();
+            listaNombres.add(i, nombre);
+        }
     }
 
     @Override
@@ -98,6 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    //controla que el contador no se pase del valor minimo o maximo
     private void controlarValores() {
         if (valorContador < valorMin) {
             contador.setText(valorMin.toString());
@@ -112,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    //dependiendo de parametro que se le pase(1 o 2) muestra u oculta el campo asociado a 'valorContador'
     private void mostrarOculatarCampo(Integer valor){
         switch (valor) {
             case 1:
@@ -124,6 +131,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    //pasa a Tabla Encuentros y envia los parametros de nombres/jugadores y la cantidad de estos
     public void generarTorneo(View v){
         crearListaContenidos(listaCampos,valorContador);
         Intent intent = new Intent(this , TablaEncuentros.class);
@@ -133,6 +141,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(intent);
     }
 
+    //reinica e contador, lo vuelve a su valor minimo y los editText a blanco
     private void resetCampos(){
         Integer i;
         contador.setText(valorMin.toString());

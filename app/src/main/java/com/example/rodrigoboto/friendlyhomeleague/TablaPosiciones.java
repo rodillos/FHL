@@ -27,8 +27,9 @@ public class TablaPosiciones extends AppCompatActivity {
     jugadorDatos jugador1,jugador2,jugador3,jugador4,jugador5,jugador6,jugador7,jugador8,jugador9
             ,jugador10;
 
+    ArrayList<Integer> partidos = new ArrayList<>(45);
     FloatingActionButton volver, finalizar;
-
+    ArrayList<String> nombreJugadores = new ArrayList<>(10);
     ArrayList<TextView> listaPosiciones = new ArrayList<>();
     ArrayList<jugadorDatos> Jugadores = new ArrayList<>();
     ArrayList<TextView> listaPJ = new ArrayList<>(10);// en 0 esta lo correspondiente a 10
@@ -36,25 +37,15 @@ public class TablaPosiciones extends AppCompatActivity {
     ArrayList<TextView> listaPE = new ArrayList<>(10);// en 0 esta lo correspondiente a 10
     ArrayList<TextView> listaPP = new ArrayList<>(10);// en 0 esta lo correspondiente a 10
     ArrayList<TextView> listaPTS = new ArrayList<>(10);// en 0 esta lo correspondiente a 10
-
-    class jugadorDatos {
-        //String id / nombre;
-        //Integer partidosJugados,partidosJugados, partidosGanados,partidosEmpatados,
-        // partidosPerdidos, puntos, posicion;
+    //TODO modificar las asignaciones a array para que se agreguen en una posicion especifica, para asi no extender la lista mas a alla de su tamaño
+    static class jugadorDatos {
+        String nombre;
+        Integer partidosJugados, partidosGanados,partidosEmpatados,partidosPerdidos, puntos, posicion;
         ArrayList<Integer> partidosLocal = new ArrayList<>();
         ArrayList<Integer> partidosVisitante = new ArrayList<>();
 
-        TextView id, partidosJugados, partidosGanados,partidosEmpatados,partidosPerdidos, puntos, posicion;
-
-        public jugadorDatos(TextView id,TextView pj,TextView pg,TextView pe,TextView pp,TextView pts, TextView pos){
-            this.id = id;
-            this.partidosJugados = pj;
-            this.partidosGanados = pg;
-            this.partidosEmpatados = pe;
-            this.partidosPerdidos = pp;
-            this.puntos = pts;
-            this.posicion = pos;
-
+        public void setNombre(String nombre){
+            this.nombre = nombre;
         }
 
         public void setPartidosLocal(ArrayList<Integer> local){
@@ -85,8 +76,11 @@ public class TablaPosiciones extends AppCompatActivity {
 
         Intent intentTabla = getIntent();
         Bundle bundle = intentTabla.getExtras();
-        if (bundle != null) {
-            Integer cantidadJugadores = Integer.parseInt(bundle.get("PARTICIPANTES").toString());
+        nombreJugadores = intentTabla.getStringArrayListExtra("NOMBRES");
+        partidos = intentTabla.getIntegerArrayListExtra("PARTIDOS");
+
+        if (bundle != null && !(nombreJugadores.isEmpty()) && !(partidos.isEmpty())) {
+            Integer cantidadJugadores = Integer.parseInt(bundle.get("CANTIDAD").toString());
         }
 
         ArrayList<String> nombres = intentTabla.getStringArrayListExtra("NOMBRES");
@@ -101,19 +95,6 @@ public class TablaPosiciones extends AppCompatActivity {
 
         asignarJugadores();
         asignarPartidos();
-        jugador1 = new jugadorDatos(J1,pJ1,pG1,pE1,pP1,PTS1,p1);
-        jugador2 = new jugadorDatos(J2,pJ2,pG2,pE2,pP2,PTS2,p2);
-        jugador3 = new jugadorDatos(J3,pJ3,pG3,pE3,pP3,PTS3,p3);
-        jugador4 = new jugadorDatos(J4,pJ4,pG4,pE4,pP4,PTS4,p4);
-        jugador5 = new jugadorDatos(J5,pJ5,pG5,pE5,pP5,PTS5,p5);
-        jugador6 = new jugadorDatos(J6,pJ6,pG6,pE6,pP6,PTS6,p6);
-        jugador7 = new jugadorDatos(J7,pJ7,pG7,pE7,pP7,PTS7,p7);
-        jugador8 = new jugadorDatos(J8,pJ8,pG8,pE8,pP8,PTS8,p8);
-        jugador9 = new jugadorDatos(J9,pJ9,pG9,pE9,pP9,PTS9,p9);
-        jugador10 = new jugadorDatos(J10,pJ10,pG10,pE10,pP10,PTS10,p10);
-
-        Jugadores.addAll(Arrays.asList(jugador1,jugador2,jugador3,jugador4,jugador5,jugador6,jugador7,jugador8,jugador9,jugador10));
-
         asiganarNombres(listaNombres);
     }
 
@@ -140,19 +121,20 @@ public class TablaPosiciones extends AppCompatActivity {
                 Integer puntosJugador1 = Integer.parseInt(Jugadores.get(j).puntos.toString());
                 Integer puntosJugador2 = Integer.parseInt(Jugadores.get(j+1).puntos.toString());
                 if ( puntosJugador1 < puntosJugador2){
-                    auxiliar = Jugadores.get(j).posicion.getText().toString();
-                    auxiliar2 = Jugadores.get(j+1).posicion.getText().toString();
-                    Jugadores.get(j).posicion.setText(auxiliar2);
-                    Jugadores.get(j+1).posicion.setText(auxiliar);
+                    auxiliar = Jugadores.get(j).posicion.toString();
+                    auxiliar2 = Jugadores.get(j+1).posicion.toString();
+                    Jugadores.get(j).posicion = Integer.parseInt(auxiliar2);
+                    Jugadores.get(j+1).posicion = Integer.parseInt(auxiliar);
                     }
                 }
             }
         }
 
+    //TODO esto deberia ya estar asignado desde la primer activity e irse pasando entre todas
     private void asiganarNombres(ArrayList<String> lista) {
 
         for (Integer i = 0; i < lista.size(); i++)
-            Jugadores.get(i).id.setText(lista.get(i));
+            Jugadores.get(i).nombre  = lista.get(i).toString();
 
     }
 
@@ -173,7 +155,7 @@ public class TablaPosiciones extends AppCompatActivity {
 
         puntos += Integer.parseInt(jugador.partidosEmpatados.toString());
 
-        jugador.puntos.setText(puntos.toString());
+        jugador.puntos = Integer.parseInt(puntos.toString());
     }
 
     //asigna las ids de los partidos (jugados,ganados,empatados y perdidos), puntos, y posiciones
@@ -289,7 +271,7 @@ public class TablaPosiciones extends AppCompatActivity {
     private void definirResultadosPorJugador(jugadorDatos jugador){
 
         ArrayList<Integer> listita = jugador.getPartidosLocal();
-        for (Integer i = 0; i < listita.size(); i++)
+        //for (Integer i = 0; i < listita.size(); i++);
             //no se que hacer si que venga ya el resultado de los partidos desde la anterior activity
             // o se deberia calcular acá, ahora  es muy tarde, mañana u hoy a la ncohe, lo pensamos bien
             //para calcular aca se deberia tener accseso a la lista con los radio group y con el

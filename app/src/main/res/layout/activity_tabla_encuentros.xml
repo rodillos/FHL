@@ -81,19 +81,23 @@
                         android:id="@+id/local1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                           />
 
                     <RadioButton
                         android:id="@+id/empate1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                         />
+
 
                     <RadioButton
                         android:id="@+id/visitante1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
                 </RadioGroup>
 
                 <TextView
@@ -144,19 +148,22 @@
                         android:id="@+id/local2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/empate2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/visitante2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
                 </RadioGroup>
 
                 <TextView
@@ -205,19 +212,22 @@
                         android:id="@+id/local3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/empate3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/visitante3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
                 </RadioGroup>
 
                 <TextView
@@ -266,19 +276,22 @@
                         android:id="@+id/local4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/empate4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/visitante4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
                 </RadioGroup>
 
                 <TextView
@@ -327,19 +340,22 @@
                         android:id="@+id/local5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/empate5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/visitante5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
                 </RadioGroup>
 
                 <TextView
@@ -388,19 +404,22 @@
                         android:id="@+id/local6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/empate6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/visitante6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
                 </RadioGroup>
 
                 <TextView
@@ -449,19 +468,22 @@
                         android:id="@+id/local7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/empate7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/visitante7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
                 </RadioGroup>
 
                 <TextView
@@ -510,19 +532,22 @@
                         android:id="@+id/local8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/empate8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/visitante8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
                 </RadioGroup>
 
                 <TextView
@@ -571,19 +596,22 @@
                         android:id="@+id/local9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/empate9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/visitante9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
                 </RadioGroup>
 
                 <TextView
@@ -599,7 +627,9 @@
                     android:text="@string/jugador7"
                     android:textAlignment="center"
                     android:textSize="12dp" />
-            </TableRow>            <TableRow
+            </TableRow>
+
+            <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="3dp"
@@ -628,22 +658,25 @@
                 android:id="@+id/encuentro0">
 
                 <RadioButton
-                    android:id="@+id/local0"
+                    android:id="@+id/local10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
-                    android:id="@+id/empate0"
+                    android:id="@+id/empate10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
-                    android:id="@+id/visitante0"
+                    android:id="@+id/visitante10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -692,19 +725,22 @@
                         android:id="@+id/local11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/empate11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/visitante11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
                 </RadioGroup>
 
                 <TextView
@@ -753,19 +789,22 @@
                         android:id="@+id/local12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/empate12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/visitante12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
                 </RadioGroup>
 
                 <TextView
@@ -814,19 +853,22 @@
                         android:id="@+id/local13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/empate13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
 
                     <RadioButton
                         android:id="@+id/visitante13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                          />
                 </RadioGroup>
 
                 <TextView
@@ -876,19 +918,22 @@
                     android:id="@+id/local14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                       />
 
                 <RadioButton
                     android:id="@+id/empate14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -937,19 +982,22 @@
                     android:id="@+id/local15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -998,19 +1046,22 @@
                 android:id="@+id/local16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/empate16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/visitante16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
         </RadioGroup>
 
         <TextView
@@ -1059,19 +1110,22 @@
             android:id="@+id/local17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
 
         <RadioButton
             android:id="@+id/empate17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
 
         <RadioButton
             android:id="@+id/visitante17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
     </RadioGroup>
 
     <TextView
@@ -1120,19 +1174,22 @@ android:id="@+id/e18">
                     android:id="@+id/local18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -1181,19 +1238,22 @@ android:id="@+id/e18">
                     android:id="@+id/local19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
             <TextView
                 android:id="@+id/jugador55"
@@ -1242,19 +1302,22 @@ android:id="@+id/e18">
                 android:id="@+id/local20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/empate20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/visitante20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
         </RadioGroup>
 
         <TextView
@@ -1303,19 +1366,22 @@ android:id="@+id/e18">
                 android:id="@+id/local21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/empate21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/visitante21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
         </RadioGroup>
 
         <TextView
@@ -1364,19 +1430,22 @@ android:id="@+id/e18">
                 android:id="@+id/local22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/empate22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/visitante22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
         </RadioGroup>
 
         <TextView
@@ -1425,19 +1494,22 @@ android:id="@+id/e18">
                 android:id="@+id/local23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/empate23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/visitante23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
         </RadioGroup>
 
         <TextView
@@ -1486,19 +1558,23 @@ android:id="@+id/e18">
                 android:id="@+id/local24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  
+                />
 
             <RadioButton
                 android:id="@+id/empate24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/visitante24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
         </RadioGroup>
 
         <TextView
@@ -1548,19 +1624,22 @@ android:id="@+id/e18">
             android:id="@+id/local25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
 
         <RadioButton
             android:id="@+id/empate25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
 
         <RadioButton
             android:id="@+id/visitante25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
     </RadioGroup>
 
     <TextView
@@ -1609,19 +1688,22 @@ android:id="@+id/e18">
             android:id="@+id/local26"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
 
         <RadioButton
             android:id="@+id/empate26"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
 
         <RadioButton
             android:id="@+id/visitante26"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
     </RadioGroup>
 
     <TextView
@@ -1670,19 +1752,22 @@ android:id="@+id/e18">
             android:id="@+id/local27"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
 
         <RadioButton
             android:id="@+id/empate27"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
 
         <RadioButton
             android:id="@+id/visitante27"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
     </RadioGroup>
 
     <TextView
@@ -1731,19 +1816,22 @@ android:id="@+id/e18">
             android:id="@+id/local28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
 
         <RadioButton
             android:id="@+id/empate28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
 
         <RadioButton
             android:id="@+id/visitante28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
     </RadioGroup>
 
     <TextView
@@ -1792,19 +1880,22 @@ android:id="@+id/e18">
             android:id="@+id/local29"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
 
         <RadioButton
             android:id="@+id/empate29"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
 
         <RadioButton
             android:id="@+id/visitante29"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+              />
     </RadioGroup>
 
     <TextView
@@ -1853,19 +1944,22 @@ android:id="@+id/e18">
                 android:id="@+id/local30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/empate30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/visitante30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
         </RadioGroup>
 
         <TextView
@@ -1914,19 +2008,22 @@ android:id="@+id/e18">
                 android:id="@+id/local31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/empate31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/visitante31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
         </RadioGroup>
 
         <TextView
@@ -1975,19 +2072,22 @@ android:id="@+id/e18">
                 android:id="@+id/local32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/empate32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/visitante32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
         </RadioGroup>
 
         <TextView
@@ -2005,7 +2105,8 @@ android:id="@+id/e18">
             android:textSize="12dp" />
     </TableRow>
 
-    </TableLayout><TableRow
+    </TableLayout>
+        <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="3dp"
@@ -2037,19 +2138,22 @@ android:id="@+id/e18">
                 android:id="@+id/local33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/empate33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
 
             <RadioButton
                 android:id="@+id/visitante33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                  />
         </RadioGroup>
 
         <TextView
@@ -2098,19 +2202,22 @@ android:id="@+id/e18">
                     android:id="@+id/local34"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate34"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante34"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -2159,19 +2266,22 @@ android:id="@+id/e18">
                     android:id="@+id/local35"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate35"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante35"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -2220,19 +2330,22 @@ android:id="@+id/e18">
                     android:id="@+id/local36"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate36"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante36"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -2275,25 +2388,29 @@ android:id="@+id/e18">
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:orientation="horizontal"
-                android:id="@+id/encuentro37">
+                android:id="@+id/encuentro37"
+                >
 
                 <RadioButton
                     android:id="@+id/local37"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate37"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante37"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -2342,19 +2459,22 @@ android:id="@+id/e18">
                     android:id="@+id/local38"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate38"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante38"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -2403,19 +2523,22 @@ android:id="@+id/e18">
                     android:id="@+id/local39"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate39"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante39"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -2464,19 +2587,22 @@ android:id="@+id/e18">
                     android:id="@+id/local40"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate40"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante40"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -2525,19 +2651,22 @@ android:id="@+id/e18">
                     android:id="@+id/local41"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate41"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante41"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -2586,19 +2715,22 @@ android:id="@+id/e18">
                     android:id="@+id/local42"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate42"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante42"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -2647,19 +2779,22 @@ android:id="@+id/e18">
                     android:id="@+id/local43"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate43"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante43"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -2708,19 +2843,22 @@ android:id="@+id/e18">
                     android:id="@+id/local44"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate44"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/visitante44"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
             //TODO falta un octavo partido para el jugador 7 y 5
             <TextView
@@ -2769,19 +2907,21 @@ android:id="@+id/e18">
                     android:id="@+id/local45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
 
                 <RadioButton
                     android:id="@+id/empate45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"/>
 
                 <RadioButton
                     android:id="@+id/visitante45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                      />
             </RadioGroup>
 
             <TextView
@@ -2798,7 +2938,7 @@ android:id="@+id/e18">
                 android:textAlignment="center"
                 android:textSize="12dp" />
         </TableRow>
-    </TableLayout>
+        </TableLayout>
     </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
